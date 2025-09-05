@@ -41,23 +41,6 @@ It manages all school courses and enforces **role-based access control**.
 
 ---
 
-## 📂 Project Structure  
-course-service
-│── src/main/java/com/mini/school/erp/course_service
-│ ├── controller # REST controllers
-│ ├── service # Business logic
-│ ├── repository # JPA repositories
-│ ├── entity # JPA entities (course)
-│ ├── config # Security/JWT/Redis configurations
-│ ├── exception # Custom exception handling
-│ └── CourseServiceApplication.java
-│
-│── src/main/resources
-│ ├── application.properties
-│
-│
-└── pom.xml
-
 ## 🚀 Setup & Run
 
 ### Prerequisites
