@@ -1,5 +1,6 @@
 package com.mini.school.erp.course_service.validation.business;
 
+import com.mini.school.erp.course_service.exception.BusinessValidationException;
 import com.mini.school.erp.course_service.exception.errormessages.ErrorMessages;
 import com.mini.school.erp.course_service.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,7 @@ public class BusinessValidation {
     public void validateCourseNameUnique(String courseName) {
         courseRepository.findByCourseNameIgnoreCase(courseName)
                 .ifPresent(c -> {
-                    throw new RuntimeException(ErrorMessages.COURSE_NAME + courseName + ErrorMessages.COURSE_ALREADY);
+                    throw new BusinessValidationException(ErrorMessages.COURSE_NAME +' '+courseName +' '+ErrorMessages.COURSE_ALREADY);
                 });
     }
 }
